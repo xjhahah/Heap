@@ -19,4 +19,5 @@ HPDataType HeapTop(Heap* hp);
 int HeapSize(Heap* hp);
 int HeapCapacity(Heap* hp);
 int HeapEmpty(Heap* hp);
+void HeapSort(HPDataType* arr, int n);
 void HeapPrint(Heap* hp);

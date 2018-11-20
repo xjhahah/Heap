@@ -1,6 +1,6 @@
 #include "Heap.h"
 
-//向下调整
+//向下调整    大堆    效率为log n
 void Swap(HPDataType* left, HPDataType* right)
 {
 	HPDataType tmp;
@@ -115,6 +115,26 @@ HPDataType HeapTop(Heap* hp)
 	assert(hp);
 	return hp->_arr[0];
 }
+//堆排序    升序用向下调整（大堆）
+void HeapSort(HPDataType* arr, int n)
+{
+	//建堆
+	int i = 0;
+	for (i = (n - 2) / 2; i >= 0; --i)
+	{
+		AdjustDown(arr, n, i);
+	}
+	//排序
+	int end = n - 1;
+	while (end > 0)
+	{
+		Swap(&arr[0], &arr[end]);
+		//调整堆到次大的数
+		AdjustDown(arr, end, 0);
+		--end;
+	}
+}
+
 void HeapPrint(Heap* hp)
 {
 	assert(hp);
