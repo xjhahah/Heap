@@ -115,6 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Heap.c" />
+    <ClCompile Include="Main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Heap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
