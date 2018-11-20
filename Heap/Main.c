@@ -12,6 +12,9 @@ void TestHeap()
 
 	HeapPush(&hp, 100);
 	HeapPrint(&hp);
+
+	HeapPop(&hp);
+	HeapPrint(&hp);
 }
 int main()
 {

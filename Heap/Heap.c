@@ -84,7 +84,9 @@ void HeapPush(Heap* hp, HPDataType data)
 void HeapPop(Heap* hp)
 {
 	assert(hp);
-
+	Swap(&hp->_arr[0], &hp->_arr[hp->_size - 1]);
+	hp->_size--;
+	AdjustDown(hp->_arr, hp->_size, 0);
 }
 void HeapDestroy(Heap* hp)
 {
@@ -102,6 +104,11 @@ int HeapCapacity(Heap* hp)
 {
 	assert(hp);
 	return hp->_capacity;
+}
+int HeapEmpty(Heap* hp)
+{
+	assert(hp);
+	return 0 == hp->_size;
 }
 HPDataType HeapTop(Heap* hp)
 {
