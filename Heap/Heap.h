@@ -1,4 +1,5 @@
 #pragma once
+
 #include <stdio.h>
 #include <assert.h>
 #include <malloc.h>
@@ -11,7 +12,7 @@ typedef struct Heap
 	int _capacity;
 }Heap;
 
-void HeapInit(Heap* hp,HPDataType* arr, int n);
+void HeapInit(Heap* hp, HPDataType* arr, int n);
 void HeapPush(Heap* hp, HPDataType data);
 void HeapPop(Heap* hp);
 void HeapDestroy(Heap* hp);
